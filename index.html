@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget App</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<script src="./app.js"></script>
+    <h1 class="main-title">Budget</h1>
+
+    <main>
+        <section class="salary-breakdown">
+            <h2 class="salary-breakdown__title">Monthly Salary:</h2>
+
+            <article class="salary-breakdown__expenses">
+                <ul class="salary-breakdown__expenses-list">
+                    <li>test</li>
+                </ul>
+
+                <h3 class="salary-breakdown__remaining">Remaining Salary: </h3>
+            </article>
+        </section>
+    </main>
+    <section class="add-expense">
+        <input class="add-expense__input" type="text" name="expense" id="expense" placeholder="Add expense name">
+        <input class="add-expense__input" type="text" name="expense" id="expense" placeholder="Add expense amount">
+        <button class="add-expense__button" type="submit">Add</button>
+    </section>
+
+    <!-- scripts -->
+    <script src="./app.js"></script>
 </body>
 </html>

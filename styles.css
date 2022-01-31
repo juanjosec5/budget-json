@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+  list-style-type: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #25a3ff;
+  color: white;
+}
+
+body main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  width: 90%;
+}
+
+.main-title {
+  margin: 2rem;
+}
+
+.salary-breakdown {
+  height: auto;
+}
+
+.salary-breakdown__title {
+  margin: 1rem 0;
+}
+
+.add-expense {
+  position: relative;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 12px 12px 0 0;
+  background-color: white;
+  height: 350px;
+  margin-top: -50px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add-expense__input {
+  outline: 0;
+  border-color: hotpink;
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid hotpink;
+  font-size: 1.4rem;
+  padding: 0 0.5rem;
+}
+
+.add-expense__button {
+  border: none;
+  height: 50px;
+  width: 100%;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  background-color: hotpink;
+  color: white;
+}
+
+.add-expense__button:hover {
+  cursor: pointer;
+  background-color: #ff0381;
+}
+/*# sourceMappingURL=styles.css.map */
