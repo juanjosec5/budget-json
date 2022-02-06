@@ -72,8 +72,8 @@ body main {
 }
 
 .salary-breakdown__title-wrapper {
-  width: auto;
-  max-width: 270px;
+  -ms-flex-preferred-size: 270px;
+      flex-basis: 270px;
   margin: 0 auto;
   background-color: #f9934a;
   background: -webkit-gradient(linear, left top, left bottom, from(#FFB936), to(#FB8B53));
@@ -133,15 +133,13 @@ body main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .salary-breakdown__expenses-list .expense-item__name {
   font-weight: 500;
-}
-
-.salary-breakdown__expenses-list .expense-item__amount {
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .salary-breakdown__expenses-list .expense-item__delete-btn {
@@ -250,7 +248,7 @@ body main {
   width: 100%;
   font-size: 1.4rem;
   border-radius: 10px;
-  background-color: #4D84FE;
+  background: #4D84FE;
   color: white;
 }
 

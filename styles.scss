@@ -51,8 +51,7 @@ body main {
     }
 
     &__title-wrapper {
-        width: auto;
-        max-width: 270px;
+        flex-basis: 270px;
         margin: 0 auto;
         background-color: rgb(249,147,74);
         background: linear-gradient(#FFB936, #FB8B53);
@@ -100,14 +99,12 @@ body main {
                 justify-content: space-between;
                 line-height: 1.8rem;
                 align-items: center;
+                font-weight: 600;
+                font-size: 1.5rem;
 
                 &__name {
                     font-weight: 500;
-                }
-
-                &__amount {
-                    font-weight: 600;
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                 }
 
                 &__delete-btn {
@@ -202,7 +199,7 @@ body main {
         width: 100%;
         font-size: 1.4rem;
         border-radius: 10px;
-        background-color: #4D84FE;
+        background: #4D84FE;
         color: white;
     }
 
