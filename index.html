@@ -8,26 +8,35 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1 class="main-title">Budget</h1>
-
     <main>
         <section class="salary-breakdown">
-            <h2 class="salary-breakdown__title">Monthly Salary:</h2>
+            <div class="salary-remaining">
+                <div class="salary-breakdown__title-wrapper">
+                    <h2 class="salary-breakdown__title">Monthly Salary:</h>
+                </div>
+                <div class="salary-breakdown__title-wrapper salary-breakdown__title-wrapper-remaining">
+                    <h2 class="salary-breakdown__title remaining">Remaining Salary:</h>
+                </div>
+            </div>
 
             <article class="salary-breakdown__expenses">
                 <ul class="salary-breakdown__expenses-list">
-                    <li>test</li>
+                    <li class="expense-item">
+                        <span class="expense-item__details">
+                            <span class="expense-item__name">name</span> <br /> <span class="expense-item__amount">1000</span>
+                        </span>
+                        <button class="expense-item__delete-btn" onclick="removeItem(this)">&#128465;</button>
+                    </li>
                 </ul>
-
-                <h3 class="salary-breakdown__remaining">Remaining Salary: </h3>
             </article>
         </section>
+        <button class="show-add-expense">&#9650</button>
     </main>
-    <section class="add-expense">
-        <input class="add-expense__input" type="text" name="expense" id="expense" placeholder="Add expense name">
-        <input class="add-expense__input" type="text" name="expense" id="expense" placeholder="Add expense amount">
+    <aside class="add-expense closed">
+        <input class="add-expense__input add-expense__name" type="text" name="expense" id="expense" placeholder="Add expense name">
+        <input class="add-expense__input add-expense__amount" type="number" name="expense" id="expense" placeholder="Add expense amount">
         <button class="add-expense__button" type="submit">Add</button>
-    </section>
+    </aside>
 
     <!-- scripts -->
     <script src="./app.js"></script>

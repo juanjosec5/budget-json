@@ -25,39 +25,189 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #25a3ff;
-  color: white;
+  background-color: #f8f8f8;
+  color: grey;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 body main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  width: 90%;
+  width: 100%;
+  padding: 0 25px;
+  height: 100%;
+  position: relative;
+  padding-top: 40px;
 }
 
-.main-title {
-  margin: 2rem;
+.smallTitle {
+  font-size: 1rem;
 }
 
 .salary-breakdown {
   height: auto;
 }
 
+.salary-breakdown .salary-remaining {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.salary-breakdown .salary-remaining .remaining-wrapper {
+  background-color: red;
+}
+
+.salary-breakdown__title-wrapper {
+  width: auto;
+  max-width: 270px;
+  margin: 0 auto;
+  background-color: #f9934a;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFB936), to(#FB8B53));
+  background: linear-gradient(#FFB936, #FB8B53);
+  color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 1px 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.salary-breakdown__title-wrapper-remaining {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5391C7), to(#5B67F2));
+  background: linear-gradient(#5391C7, #5B67F2);
+}
+
 .salary-breakdown__title {
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+  font-size: 32px;
+  line-height: 3rem;
+  text-align: left;
   margin: 1rem 0;
+  width: auto;
+}
+
+.salary-breakdown__expenses {
+  color: white;
+}
+
+.salary-breakdown__expenses-list {
+  background-color: transparent;
+  padding: 5px;
+  height: auto;
+  min-height: 240px;
+  max-height: 500px;
+  overflow-y: scroll;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.salary-breakdown__expenses-list .expense-item {
+  padding: 1rem;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  color: darkslategrey;
+  margin: 10px 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 1.8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.salary-breakdown__expenses-list .expense-item__name {
+  font-weight: 500;
+}
+
+.salary-breakdown__expenses-list .expense-item__amount {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.salary-breakdown__expenses-list .expense-item__delete-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 2.5rem;
+  font-weight: 00;
+}
+
+.salary-breakdown__expenses-list .expense-item__delete-btn:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.salary-breakdown__expenses-list hr {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.salary-breakdown__expenses-list::-webkit-scrollbar {
+  display: none;
+}
+
+.salary-breakdown__remaining {
+  color: darkslategrey;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.show-add-expense {
+  z-index: 999;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #4D84FE;
+  top: 93%;
+  left: calc(50% - 28px);
+  font-size: 1.5rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  text-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  cursor: pointer;
+}
+
+.show-add-expense.clicked {
+  text-shadow: rgba(0, 0, 0, 0.36) 0px 2px 6px;
+  top: calc(100% - 400px);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.show-add-expense.show-add-expense:hover {
+  color: #80a7fe;
 }
 
 .add-expense {
-  position: relative;
+  position: absolute;
+  top: calc(100% - 350px);
   width: 90%;
   max-width: 420px;
   border-radius: 12px 12px 0 0;
   background-color: white;
   height: 350px;
-  margin-top: -50px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 8px;
+          box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 8px;
   padding: 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,16 +222,25 @@ body main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+}
+
+.add-expense.closed {
+  position: absolute;
+  top: 98%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .add-expense__input {
   outline: 0;
-  border-color: hotpink;
+  border-color: #4D84FE;
   height: 50px;
   width: 100%;
   border: none;
-  border-bottom: 2px solid hotpink;
-  font-size: 1.4rem;
+  border-bottom: 2px solid #4D84FE;
+  font-size: 1.2rem;
   padding: 0 0.5rem;
 }
 
@@ -91,12 +250,12 @@ body main {
   width: 100%;
   font-size: 1.4rem;
   border-radius: 10px;
-  background-color: hotpink;
+  background-color: #4D84FE;
   color: white;
 }
 
 .add-expense__button:hover {
   cursor: pointer;
-  background-color: #ff0381;
+  background-color: #1a61fe;
 }
 /*# sourceMappingURL=styles.css.map */
